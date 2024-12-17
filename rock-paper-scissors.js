@@ -45,12 +45,13 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
+
 
 function playGame() {
   let message = '';
   while (i = 0, i <=5, i++) {
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
 
