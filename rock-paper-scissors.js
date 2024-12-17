@@ -4,6 +4,9 @@
 // If userChoice beats computerChoice, display victory message
 // If computerChoice beats userChoice, display defeat message
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
   let number = Math.random();
   let computerChoice = '';
@@ -28,4 +31,3 @@ function getHumanChoice(humanChoice) {
   }
 }
 
-console.log(getHumanChoice())
