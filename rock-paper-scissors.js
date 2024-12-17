@@ -28,5 +28,16 @@ function getHumanChoice(humanChoice) {
 function playRound(humanChoice, computerChoice) {
   humanChoice = humanChoice.toLowerCase();
   computerChoice = computerChoice.toLowerCase();
-}
 
+  if (humanChoice === computerChoice) {
+    console.log('Tie!');
+  } else if (
+    (humanChoice === 'rock' && computerChoice === 'scissors') ||
+    (humanChoice === 'scissors' && computerChoice === 'paper') ||
+    (humanChoice === 'paper' && computerChoice === 'rock') 
+  ) {
+    console.log(`You win, ${humanChoice} beats ${computerChoice}!`);
+  } else {
+    console.log(`You lose, ${computerChoice} beats ${humanChoice}!`);
+  }
+}
