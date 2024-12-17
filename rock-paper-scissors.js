@@ -25,3 +25,8 @@ function getHumanChoice(humanChoice) {
   humanChoice = prompt('Please choose rock, paper or scissors:');
 }
 
+function playRound(humanChoice, computerChoice) {
+  humanChoice = humanChoice.toLowerCase();
+  computerChoice = computerChoice.toLowerCase();
+}
+
