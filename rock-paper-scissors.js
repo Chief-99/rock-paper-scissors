@@ -41,3 +41,6 @@ function playRound(humanChoice, computerChoice) {
     console.log(`You lose, ${computerChoice} beats ${humanChoice}!`);
   }
 }
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
