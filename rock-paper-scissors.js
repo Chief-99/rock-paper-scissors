@@ -23,11 +23,5 @@ function getComputerChoice() {
 
 function getHumanChoice(humanChoice) {
   humanChoice = prompt('Please choose rock, paper or scissors:');
-
-  if (humanChoice === 'rock' || humanChoice === 'paper' || humanChoice === 'scissors') {
-    return humanChoice;
-  } else {
-    alert('Please enter a valid choice');    
-  }
 }
 
