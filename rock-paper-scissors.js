@@ -1,8 +1,3 @@
-// Create a variable for the computer choice
-// Randomly assign either 'rock', 'paper' or 'scissors' to computerChoice
-// Get user's choice from a prompt
-// If userChoice beats computerChoice, display victory message
-// If computerChoice beats userChoice, display defeat message
 
 let humanScore = 0;
 let computerScore = 0;
@@ -31,16 +26,16 @@ function playRound(humanChoice, computerChoice) {
   computerChoice = computerChoice.toLowerCase();
 
   if (humanChoice === computerChoice) {
-    console.log('Tie!');
+    alert('Tie!');
   } else if (
     (humanChoice === 'rock' && computerChoice === 'scissors') ||
     (humanChoice === 'scissors' && computerChoice === 'paper') ||
     (humanChoice === 'paper' && computerChoice === 'rock') 
   ) {
-    console.log(`You win, ${humanChoice} beats ${computerChoice}!`);
+    alert(`You win, ${humanChoice} beats ${computerChoice}!`);
     humanScore++;
   } else {
-    console.log(`You lose, ${computerChoice} beats ${humanChoice}!`);
+    alert(`You lose, ${computerChoice} beats ${humanChoice}!`);
     computerScore++;
   }
 }
@@ -59,7 +54,7 @@ function playGame() {
 
   console.log(`Human score: ${humanScore} Computer score: ${computerScore}`);
   
-  if (humanScore = computerScore) {
+  if (humanScore === computerScore) {
     message = 'Tie! So close' 
   } else if (humanScore > computerScore) {
     message = `You win! Well done`;
