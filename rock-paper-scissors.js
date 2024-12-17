@@ -49,7 +49,19 @@ function playRound(humanChoice, computerChoice) {
 // const computerSelection = getComputerChoice();
 
 function playGame() {
+  let message = '';
   while (i = 0, i <=5, i++) {
-    
+    playRound(humanSelection, computerSelection);
   }
+
+  console.log(`Human score: ${humanScore} Computer score: ${computerScore}`);
+  
+  if (humanScore > computerScore) {
+    message = `You win! Well done`;
+  } else {
+    message = `You lose! Better luck next time`;
+  }
+
+  return console.log(message);
 }
+
