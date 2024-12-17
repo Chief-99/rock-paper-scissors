@@ -38,10 +38,10 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice === 'paper' && computerChoice === 'rock') 
   ) {
     console.log(`You win, ${humanChoice} beats ${computerChoice}!`);
-    humanScore += 1;
+    humanScore++;
   } else {
     console.log(`You lose, ${computerChoice} beats ${humanChoice}!`);
-    computerScore += 1;
+    computerScore++;
   }
 }
 
@@ -49,5 +49,7 @@ function playRound(humanChoice, computerChoice) {
 // const computerSelection = getComputerChoice();
 
 function playGame() {
-  
+  while (i = 0, i <=5, i++) {
+    
+  }
 }
