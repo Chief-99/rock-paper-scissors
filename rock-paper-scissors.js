@@ -23,6 +23,7 @@ function getComputerChoice() {
 
 function getHumanChoice(humanChoice) {
   humanChoice = prompt('Please choose rock, paper or scissors:');
+  return humanChoice;
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -44,3 +45,5 @@ function playRound(humanChoice, computerChoice) {
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection)
