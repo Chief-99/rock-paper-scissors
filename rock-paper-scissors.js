@@ -49,15 +49,19 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {
   let message = '';
-  while (i = 0, i <=5, i++) {
+  let i = 0;
+  while (i <=5) {
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
+    i++;
   }
 
   console.log(`Human score: ${humanScore} Computer score: ${computerScore}`);
   
-  if (humanScore > computerScore) {
+  if (humanScore = computerScore) {
+    message = 'Tie! So close' 
+  } else if (humanScore > computerScore) {
     message = `You win! Well done`;
   } else {
     message = `You lose! Better luck next time`;
@@ -66,3 +70,4 @@ function playGame() {
   return console.log(message);
 }
 
+playGame();
