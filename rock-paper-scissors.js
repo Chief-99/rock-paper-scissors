@@ -47,6 +47,10 @@ let rock = document.querySelector('#rock');
 let paper = document.querySelector('#paper');
 let scissors = document.querySelector('#scissors');
 
+rock.addEventListener('click', playRound);
+paper.addEventListener('click', playRound);
+scissors.addEventListener('click', playRound);
+
 // * Full game function
 function playGame() {
   let message = '';
