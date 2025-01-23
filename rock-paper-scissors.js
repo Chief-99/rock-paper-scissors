@@ -24,9 +24,6 @@ function getHumanChoice(humanChoice) {
 
 // * Play round function 
 function playRound(humanChoice, computerChoice) {
-  humanChoice = humanChoice.toLowerCase();
-  computerChoice = computerChoice.toLowerCase();
-
   if (humanChoice === computerChoice) {
     alert('Tie!');
   } else if (
