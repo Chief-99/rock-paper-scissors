@@ -44,21 +44,24 @@ function playRound(humanChoice, computerChoice) {
       `);
     computerScore++;
 
-    if (computerScore === 5) {
-      alert(`The computer won five rounds. You lost the game, better luck net time!`);
-      computerScore = 0;
-      humanScore = 0;
-    } else if (humanScore === 5) {
-      alert(`You won five rounds. You won the game, well done!`);
-      computerScore = 0;
-      humanScore = 0;
+    switch (5) {
+      case computerScore: 
+        alert(`The computer won five rounds. You lost the game, better luck net time!`)
+        computerScore = 0;
+        humanScore = 0;
+        break;
+      case humanScore: 
+        alert(`You won five rounds. You won the game, well done!`)
+        computerScore = 0;
+        humanScore = 0;
+        break;
     }
   }
 
   runningScore = `
     User: ${humanScore}
     Computer: ${computerScore}`;
-    console.log(runningScore);
+    console.log(runningScore)
 }
 
 // * Button event listeners
