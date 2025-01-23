@@ -1,4 +1,4 @@
-
+// * Score variables
 let humanScore = 0;
 let computerScore = 0;
 
@@ -16,11 +16,13 @@ function getComputerChoice() {
   return computerChoice;
 }
 
+// * User choice function
 function getHumanChoice(humanChoice) {
   humanChoice = prompt('Please choose rock, paper or scissors:');
   return humanChoice;
 }
 
+// * Play round function 
 function playRound(humanChoice, computerChoice) {
   humanChoice = humanChoice.toLowerCase();
   computerChoice = computerChoice.toLowerCase();
@@ -40,8 +42,10 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
+// * Button event listeners
 
 
+// * Full game function
 function playGame() {
   let message = '';
 
