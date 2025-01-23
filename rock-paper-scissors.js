@@ -54,6 +54,11 @@ function playRound(humanChoice, computerChoice) {
       humanScore = 0;
     }
   }
+
+  runningScore = `
+    User: ${humanScore}
+    Computer: ${computerScore}`;
+    console.log(runningScore);
 }
 
 // * Button event listeners
