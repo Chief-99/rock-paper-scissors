@@ -43,7 +43,9 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // * Button event listeners
-
+let rock = document.querySelector('#rock');
+let paper = document.querySelector('#paper');
+let scissors = document.querySelector('#scissors');
 
 // * Full game function
 function playGame() {
