@@ -57,4 +57,3 @@ function playGame() {
 
   return console.log(message);
 }
-
