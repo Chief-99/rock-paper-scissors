@@ -46,8 +46,8 @@ let paper = document.querySelector('#paper');
 let scissors = document.querySelector('#scissors');
 
 rock.addEventListener('click', () => {playRound('rock')});
-paper.addEventListener('click', playRound);
-scissors.addEventListener('click', playRound);
+paper.addEventListener('click', () => {playRound('paper')});
+scissors.addEventListener('click', () => {playRound('scissors')});
 
 // * Full game function
 function playGame() {
