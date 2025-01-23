@@ -45,9 +45,13 @@ function playRound(humanChoice, computerChoice) {
     computerScore++;
 
     if (computerScore === 5) {
-      alert(`The computer won five rounds. You lost the game, better luck net time!`)
+      alert(`The computer won five rounds. You lost the game, better luck net time!`);
+      computerScore = 0;
+      humanScore = 0;
     } else if (humanScore === 5) {
-      alert(`You won five rounds. You won the game, well done!`)
+      alert(`You won five rounds. You won the game, well done!`);
+      computerScore = 0;
+      humanScore = 0;
     }
   }
 }
