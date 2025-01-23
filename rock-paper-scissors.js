@@ -84,3 +84,4 @@ function playGame() {
 
 // * Results
 let results = document.querySelector('#results');
+let runningScore = '';
