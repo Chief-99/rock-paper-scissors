@@ -44,13 +44,6 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {
   let message = '';
-  let i = 0;
-  while (i <=5) {
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    i++;
-  }
 
   console.log(`Human score: ${humanScore} Computer score: ${computerScore}`);
   
@@ -65,4 +58,3 @@ function playGame() {
   return console.log(message);
 }
 
-playGame();
