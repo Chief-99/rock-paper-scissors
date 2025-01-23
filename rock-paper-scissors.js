@@ -33,16 +33,22 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice === 'paper' && computerChoice === 'rock') 
   ) {
     alert(`
-      Computer chose ${computerChoice}
+      Computer chose ${computerChoice}.
       You win, ${humanChoice} beats ${computerChoice}!
       `);
     humanScore++;
   } else {
     alert(`
-      Computer chose ${computerChoice}
+      Computer chose ${computerChoice}.
       You lose, ${computerChoice} beats ${humanChoice}!
       `);
     computerScore++;
+
+    if (computerScore === 5) {
+      alert(`The computer won five rounds. You lost the game, better luck net time!`)
+    } else if (humanScore === 5) {
+      alert(`You won five rounds. You won the game, well done!`)
+    }
   }
 }
 
@@ -71,3 +77,5 @@ function playGame() {
 
   return console.log(message);
 }
+
+// * Results
