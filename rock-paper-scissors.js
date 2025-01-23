@@ -33,15 +33,13 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice === 'paper' && computerChoice === 'rock') 
   ) {
     alert(`
-      User: ${humanChoice}
-      Computer: ${computerChoice}
+      Computer chose ${computerChoice}
       You win, ${humanChoice} beats ${computerChoice}!
       `);
     humanScore++;
   } else {
     alert(`
-      User: ${humanChoice}
-      Computer: ${computerChoice}
+      Computer chose ${computerChoice}
       You lose, ${computerChoice} beats ${humanChoice}!
       `);
     computerScore++;
