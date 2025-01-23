@@ -24,6 +24,7 @@ function getHumanChoice(humanChoice) {
 
 // * Play round function 
 function playRound(humanChoice, computerChoice) {
+  computerChoice = getComputerChoice();
   if (humanChoice === computerChoice) {
     alert('Tie!');
   } else if (
