@@ -48,7 +48,7 @@ function playRound(humanChoice, computerChoice) {
   runningScore = `
   User: ${humanScore}
   Computer: ${computerScore}`;
-  console.log(runningScore);
+  results.textContent = runningScore;
 
   switch (5) {
     case computerScore: 
@@ -74,22 +74,6 @@ rock.addEventListener('click', () => {playRound('rock')});
 paper.addEventListener('click', () => {playRound('paper')});
 scissors.addEventListener('click', () => {playRound('scissors')});
 
-// // * Full game function
-// function playGame() {
-//   let message = '';
-
-//   console.log(`Human score: ${humanScore} Computer score: ${computerScore}`);
-  
-//   if (humanScore === computerScore) {
-//     message = 'Tie! So close' 
-//   } else if (humanScore > computerScore) {
-//     message = `You win! Well done`;
-//   } else {
-//     message = `You lose! Better luck next time`;
-//   }
-
-//   return console.log(message);
-// }
 
 // * Results
 let results = document.querySelector('#results');
