@@ -26,25 +26,26 @@ function getHumanChoice(humanChoice) {
 function playRound(humanChoice, computerChoice) {
   computerChoice = getComputerChoice();
   if (humanChoice === computerChoice) {
-    console.log('Tie!');
+    roundResults.textContent = 'Tie!';
   } else if (
     (humanChoice === 'rock' && computerChoice === 'scissors') ||
     (humanChoice === 'scissors' && computerChoice === 'paper') ||
     (humanChoice === 'paper' && computerChoice === 'rock') 
   ) {
-    console.log(`
+    roundResults.textContent = `
       Computer chose ${computerChoice}.
       You win, ${humanChoice} beats ${computerChoice}!
-      `);
+      `;
     humanScore++;
   } else {
-    console.log(`
+    roundResults.textContent = `
       Computer chose ${computerChoice}.
       You lose, ${computerChoice} beats ${humanChoice}!
-      `);
+      `;
     computerScore++;
   }
 
+  results.appendChild(roundResults);
   runningScore = `
   User: ${humanScore}
   Computer: ${computerScore}`;
