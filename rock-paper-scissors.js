@@ -45,11 +45,11 @@ function playRound(humanChoice, computerChoice) {
     computerScore++;
   }
 
-  results.appendChild(roundResults);
   runningScore = `
   User: ${humanScore}
   Computer: ${computerScore}`;
   results.textContent = runningScore;
+  results.appendChild(roundResults);
 
   switch (5) {
     case computerScore: 
