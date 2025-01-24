@@ -43,25 +43,26 @@ function playRound(humanChoice, computerChoice) {
       You lose, ${computerChoice} beats ${humanChoice}!
       `);
     computerScore++;
-
-    switch (5) {
-      case computerScore: 
-        alert(`The computer won five rounds. You lost the game, better luck net time!`)
-        computerScore = 0;
-        humanScore = 0;
-        break;
-      case humanScore: 
-        alert(`You won five rounds. You won the game, well done!`)
-        computerScore = 0;
-        humanScore = 0;
-        break;
-    }
   }
 
   runningScore = `
-    User: ${humanScore}
-    Computer: ${computerScore}`;
-    console.log(runningScore)
+  User: ${humanScore}
+  Computer: ${computerScore}`;
+  console.log(runningScore);
+
+  switch (5) {
+    case computerScore: 
+      alert(`The computer won five rounds. You lost the game, better luck net time!`)
+      computerScore = 0;
+      humanScore = 0;
+      break;
+    case humanScore: 
+      alert(`You won five rounds. You won the game, well done!`)
+      computerScore = 0;
+      humanScore = 0;
+      break;
+  }
+  
 }
 
 // * Button event listeners
@@ -73,22 +74,22 @@ rock.addEventListener('click', () => {playRound('rock')});
 paper.addEventListener('click', () => {playRound('paper')});
 scissors.addEventListener('click', () => {playRound('scissors')});
 
-// * Full game function
-function playGame() {
-  let message = '';
+// // * Full game function
+// function playGame() {
+//   let message = '';
 
-  console.log(`Human score: ${humanScore} Computer score: ${computerScore}`);
+//   console.log(`Human score: ${humanScore} Computer score: ${computerScore}`);
   
-  if (humanScore === computerScore) {
-    message = 'Tie! So close' 
-  } else if (humanScore > computerScore) {
-    message = `You win! Well done`;
-  } else {
-    message = `You lose! Better luck next time`;
-  }
+//   if (humanScore === computerScore) {
+//     message = 'Tie! So close' 
+//   } else if (humanScore > computerScore) {
+//     message = `You win! Well done`;
+//   } else {
+//     message = `You lose! Better luck next time`;
+//   }
 
-  return console.log(message);
-}
+//   return console.log(message);
+// }
 
 // * Results
 let results = document.querySelector('#results');
