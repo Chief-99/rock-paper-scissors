@@ -81,3 +81,4 @@ scissors.addEventListener('click', () => {playRound('scissors')});
 let results = document.querySelector('#results');
 let runningScore = '';
 let resultsMessage = document.querySelector('#results-message');
+let roundResults = document.querySelector('#round-results');
