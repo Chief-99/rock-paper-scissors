@@ -52,14 +52,16 @@ function playRound(humanChoice, computerChoice) {
 
   switch (5) {
     case computerScore: 
-      alert(`The computer won five rounds. You lost the game, better luck net time!`)
-      computerScore = 0;
-      humanScore = 0;
+    computerScore = 0;
+    humanScore = 0;
+    resultsMessage.textContent = `The computer won five rounds. You lost the game, better luck next time!`;
+    results.appendChild(resultsMessage);
       break;
     case humanScore: 
-      alert(`You won five rounds. You won the game, well done!`)
       computerScore = 0;
       humanScore = 0;
+      resultsMessage.textContent = `You won five rounds. You won the game, well done!`;
+      results.appendChild(resultsMessage);
       break;
   }
   
@@ -78,3 +80,4 @@ scissors.addEventListener('click', () => {playRound('scissors')});
 // * Results
 let results = document.querySelector('#results');
 let runningScore = '';
+let resultsMessage = document.querySelector('#results-message');
