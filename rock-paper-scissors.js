@@ -53,10 +53,11 @@ function playRound(humanChoice, computerChoice) {
 
   switch (5) {
     case computerScore: 
-    computerScore = 0;
-    humanScore = 0;
-    resultsMessage.textContent = `The computer won five rounds. You lost the game, better luck next time!`;
-    results.appendChild(resultsMessage);
+      computerScore = 0;
+      humanScore = 0;
+      resultsMessage.textContent = `The computer won five rounds. You lost the game,
+        better luck next time!`;
+      results.appendChild(resultsMessage);
       break;
     case humanScore: 
       computerScore = 0;
