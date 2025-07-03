@@ -14,7 +14,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt('Please enter your choice', '');
+    let choice = prompt('Please enter your choice', '');
 
-    return humanChoice;
+    return choice;
 }
