@@ -25,7 +25,7 @@ function playRound(humanChoice, computerChoice) {
             return 'Tie game!';
         } else if(computerChoice.toLowerCase() === 'paper') {
             return 'You lose! Paper beats rock.'
-        } else {
+        } else if (computerChoice.toLowerCase() === 'scissors') {
             return 'You win! Rock beats scissors.';
         }
     } else if (humanChoice.toLowerCase() === 'paper') {
@@ -33,15 +33,15 @@ function playRound(humanChoice, computerChoice) {
             return 'You win! Paper beats rock.';
         } else if(computerChoice.toLowerCase() === 'paper') {
             return 'Tie game!'
-        } else {
+        } else if (computerChoice.toLowerCase() === 'scissors') {
             return 'You lose! Scissors beats paper.';
         }
-    } else {
+    } else if (humanChoice.toLowerCase() === 'scissors'){
         if (computerChoice.toLowerCase() === 'rock') {
             return 'You lose! Rock beats scissors.';
         } else if(computerChoice.toLowerCase() === 'paper') {
             return 'You win! Scissors beats paper.';
-        } else {
+        } else if (computerChoice.toLowerCase() === 'scissors') {
             return 'Tie game!';
         }
     }
