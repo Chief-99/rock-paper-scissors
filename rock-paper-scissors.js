@@ -18,3 +18,31 @@ function getHumanChoice() {
 
     return choice;
 }
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice.toLowerCase() === 'rock') {
+        if (computerChoice.toLowerCase() === 'rock') {
+            return 'Tie game!';
+        } else if(computerChoice.toLowerCase() === 'paper') {
+            return 'You lose! Paper beats rock.'
+        } else {
+            return 'You win! Rock beats scissors.';
+        }
+    } else if (humanChoice.toLowerCase() === 'paper') {
+        if (computerChoice.toLowerCase() === 'rock') {
+            return 'You win! Paper beats rock.';
+        } else if(computerChoice.toLowerCase() === 'paper') {
+            return 'Tie game!'
+        } else {
+            return 'You lose! Scissors beats paper.';
+        }
+    } else {
+        if (computerChoice.toLowerCase() === 'rock') {
+            return 'You lose! Rock beats scissors.';
+        } else if(computerChoice.toLowerCase() === 'paper') {
+            return 'You win! Scissors beats paper.';
+        } else {
+            return 'Tie game!';
+        }
+    }
+}
