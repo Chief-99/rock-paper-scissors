@@ -1,5 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
 
 function getComputerChoice() {
     let choiceNumber = Math.random();
@@ -15,7 +13,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let choice = prompt('Please enter your choice', '');
-
+    
     return choice;
 }
 
@@ -59,4 +57,8 @@ function playRound(humanChoice, computerChoice) {
 const humanChoice = getHumanChoice();
 const computerChoice = getComputerChoice();
 
-console.log(playRound(humanChoice, computerChoice));
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    
+}
