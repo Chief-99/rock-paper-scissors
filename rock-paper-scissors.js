@@ -1,8 +1,3 @@
-
-
-
-
-
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
@@ -63,8 +58,13 @@ function playGame() {
 
     function getHumanChoice() {
         let choice = prompt('Please enter your choice', '');
-
         return choice;
+    }
+
+    if (humanScore === 5) {
+        console.log('Congratulations, you win the game!!')
+    } else if (computerScore === 5) {
+        console.log('You lose, better luck next time!');
     }
 }
 
