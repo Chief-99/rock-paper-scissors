@@ -13,33 +13,78 @@ function playGame() {
 
         if (human === 'rock') {
             if (computer === 'rock') {
-                console.log('Tie game!');
+                console.log(
+                    `Tie game!
+                    
+                    Player: ${humanScore}
+                    Computer: ${computerScore}`
+                );
             } else if (computer === 'paper') {
                 computerScore += 1;
-                console.log('You lose! Paper beats rock.');
+                console.log(
+                    `You lose! Paper beats rock.
+                    
+                    Player: ${humanScore}
+                    Computer: ${computerScore}`
+                );
             } else if (computer === 'scissors') {
                 humanScore += 1;
-                console.log('You win! Rock beats scissors.');
+                console.log(
+                    `You win! Rock beats scissors.
+                    
+                    Player: ${humanScore}
+                    Computer: ${computerScore}`
+                );
             }
         } else if (human === 'paper') {
             if (computer === 'rock') {
                 humanScore += 1;
-                console.log('You win! Paper beats rock.');
+                console.log(
+                    `You win! Paper beats rock.
+                    
+                    Player: ${humanScore}
+                    Computer: ${computerScore}`
+                );
             } else if (computer === 'paper') {
-                console.log('Tie game!');
+                console.log(
+                    `Tie game!
+                    
+                    Player: ${humanScore}
+                    Computer: ${computerScore}`
+                );
             } else if (computer === 'scissors') {
                 computerScore += 1;
-                console.log('You lose! Scissors beats paper.');
+                console.log(
+                    `You lose! Scissors beats paper.
+                    
+                    Player: ${humanScore}
+                    Computer: ${computerScore}`
+                );
             }
         } else if (human === 'scissors') {
             if (computer === 'rock') {
                 computerScore += 1;
-                console.log('You lose! Rock beats scissors.');
+                console.log(
+                    `You lose! Rock beats scissors.
+                    
+                    Player: ${humanScore}
+                    Computer: ${computerScore}`
+                );
             } else if (computer === 'paper') {
                 humanScore += 1;
-                console.log('You win! Scissors beats paper.');
+                console.log(
+                    `You win! Scissors beats paper.
+                    
+                    Player: ${humanScore}
+                    Computer: ${computerScore}`
+                );
             } else if (computer === 'scissors') {
-                console.log('Tie game!');
+                console.log(
+                    `Tie game!
+                    
+                    Player: ${humanScore}
+                    Computer: ${computerScore}`
+                );
             }
         }
     }
