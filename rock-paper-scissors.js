@@ -1,12 +1,3 @@
-function playGame() {
-    let humanScore = 0;
-    let computerScore = 0;
-
-    while (humanScore < 5 && computerScore < 5) {
-        playRound();
-
-    } 
-
     function playRound() {
         let human = String(getHumanChoice()).toLowerCase();
         let computer = String(getComputerChoice()).toLowerCase();
@@ -87,7 +78,7 @@ function playGame() {
                 );
             }
         }
-    }
+    
 
     function getComputerChoice() {
         let choiceNumber = Math.random();
