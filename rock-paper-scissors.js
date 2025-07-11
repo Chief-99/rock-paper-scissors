@@ -4,10 +4,13 @@ let computerScore = 0;
 const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
+const display = document.querySelector('#display');
 
 rockButton.addEventListener('click', playRound);
 paperButton.addEventListener('click', playRound);
 scissorsButton.addEventListener('click', playRound);
+
+
 
 
 function playRound(event) {
@@ -16,12 +19,7 @@ function playRound(event) {
 
     if (human === 'rock') {
         if (computer === 'rock') {
-            console.log(
-                `Tie game!
-                    
-                    Player: ${humanScore}
-                    Computer: ${computerScore}`
-            );
+            display.textContent = `Tie game! \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`
         } else if (computer === 'paper') {
             computerScore += 1;
             console.log(
