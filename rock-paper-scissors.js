@@ -119,5 +119,3 @@ function playRound(event) {
         computerScore = 0;
     }
 }
-
-// playGame();
