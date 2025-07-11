@@ -110,9 +110,13 @@ function playRound(event) {
     }
 
     if (humanScore === 5) {
-        console.log('Congratulations, you win the game!!')
+        console.log('Congratulations, you win the game!!');
+        humanScore = 0;
+        computerScore = 0;
     } else if (computerScore === 5) {
         console.log('You lose, better luck next time!');
+        humanScore = 0;
+        computerScore = 0;
     }
 }
 
