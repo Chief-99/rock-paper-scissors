@@ -66,13 +66,13 @@ function playRound(event) {
         let choice = prompt('Please enter your choice', '');
         return choice;
     }
-
+// result message
     if (humanScore === 5) {
-        console.log('Congratulations, you win the game!!');
+        display.append('\n\nCongratulations, you win the game!!');
         humanScore = 0;
         computerScore = 0;
     } else if (computerScore === 5) {
-        console.log('You lose, better luck next time!');
+        display.append('\n\nYou lose, better luck next time!');
         humanScore = 0;
         computerScore = 0;
     }
