@@ -5,12 +5,11 @@ const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
 
+rockButton.addEventListener('click', playRound);
 
 
-
-
-function playRound() {
-    let human = String(getHumanChoice()).toLowerCase();
+function playRound(event) {
+    let human = event.target.id;
     let computer = String(getComputerChoice()).toLowerCase();
 
     if (human === 'rock') {
