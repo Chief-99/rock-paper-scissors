@@ -10,7 +10,7 @@ rockButton.addEventListener('click', playRound);
 paperButton.addEventListener('click', playRound);
 scissorsButton.addEventListener('click', playRound);
 
-
+display.textContent = `${humanScore} : ${computerScore}`
 
 
 function playRound(event) {
@@ -18,34 +18,34 @@ function playRound(event) {
     let computer = String(getComputerChoice()).toLowerCase();
 
     if (human === 'rock') {
-        if (computer === 'rock') {
-            display.textContent = `Tie game! \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`;
-        } else if (computer === 'paper') {
+        if (computer === 'rock') { // tie game
+            display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(2)}`;
+        } else if (computer === 'paper') { // loss
             computerScore += 1;
-            display.textContent = `You lose! Paper beats rock. \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`;
-        } else if (computer === 'scissors') {
+            display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(0)}`;;
+        } else if (computer === 'scissors') { // win
             humanScore += 1;
-            display.textContent = `You win! Rock beats scissors. \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`;
+            display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(1)}`;
         }
     } else if (human === 'paper') {
-        if (computer === 'rock') {
+        if (computer === 'rock') { // win
             humanScore += 1;
-            display.textContent = `You win paper beats rock. \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`;
-        } else if (computer === 'paper') {
-            display.textContent = `Tie game! \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`;
-        } else if (computer === 'scissors') {
+            display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(1)}`;
+        } else if (computer === 'paper') { // tie game
+            display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(2)}`;
+        } else if (computer === 'scissors') { // loss
             computerScore += 1;
-            display.textContent = `You lose! Scissors beats paper. \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`;
+            display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(0)}`;
         }
     } else if (human === 'scissors') {
-        if (computer === 'rock') {
+        if (computer === 'rock') { // loss
             computerScore += 1;
-            display.textContent = `You lose! Rock beats scissors. \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`;
-        } else if (computer === 'paper') {
+            display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(0)}`;
+        } else if (computer === 'paper') { // win
             humanScore += 1;
-            display.textContent = `You win! Scissors beat paper. \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`;
-        } else if (computer === 'scissors') {
-            display.textContent = `Tie game! \n\nPlayer: ${humanScore} \nComputer: ${computerScore}`;
+            display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(1)}`;
+        } else if (computer === 'scissors') { // tie
+            display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(2)}`;
         }
     }
 
@@ -62,10 +62,17 @@ function playRound(event) {
         }
     }
 
-    function getHumanChoice() {
-        let choice = prompt('Please enter your choice', '');
-        return choice;
+    function displayMessage(value) {
+        if (value === 0) {
+            return `You lose - ${computer} beats ${human}!`;
+        } else if (value === 1) {
+            return `You win - ${human} beats ${computer}!`;
+        } else if (value === 2) {
+            return 'Tie game!';
+        }
     }
+
+
 // result message
     if (humanScore === 5) {
         display.append('\n\nCongratulations, you win the game!!');
