@@ -53,6 +53,13 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+:root {
+    --blue-600: hsl(201, 100%, 16%);
+    --red-500: hsl(0, 69%, 48%);
+    --yellow-300: hsl(40, 97%, 64%);
+    --text-vanilla: hsl(51, 55%, 82%);
+}
+
 #score-display {
     white-space: pre-line;
 }
