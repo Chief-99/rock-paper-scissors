@@ -4,7 +4,7 @@ let computerScore = 0;
 const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
-const display = document.querySelector('#display');
+const display = document.querySelector('#score-display');
 
 rockButton.addEventListener('click', playRound);
 paperButton.addEventListener('click', playRound);
