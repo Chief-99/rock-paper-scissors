@@ -57,11 +57,11 @@ h1, h2, h3, h4, h5, h6 {
     --blue-600: hsl(201, 100%, 16%);
     --red-500: hsl(0, 69%, 48%);
     --yellow-300: hsl(40, 97%, 64%);
-    --text-vanilla: hsl(51, 55%, 82%);
+    --text-primary: hsl(40, 97%, 64%);
 }
 
 body {
-    color: var(--text-vanilla);
+    color: var(--text-primary);
     background-color: var(--blue-600);
     font-family: Orbitron, sans-serif;
 }
