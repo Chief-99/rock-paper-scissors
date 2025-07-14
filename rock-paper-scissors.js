@@ -16,6 +16,8 @@ display.textContent = `${humanScore} : ${computerScore}`
 function playRound(event) {
     let human = event.target.id;
     let computer = String(getComputerChoice()).toLowerCase();
+    let srcHuman = '';
+    let srcComputer = '';
 
     if (human === 'rock') {
         if (computer === 'rock') { // tie game
@@ -70,6 +72,14 @@ function playRound(event) {
         } else if (value === 2) {
             return 'Tie game!';
         }
+    }
+
+    function humanHands(choice) {
+        return `images/human/${choice}-human.png`;
+    }
+
+    function commputerHands(choice) {
+        return `images/computer/${choice}-computer.png`;
     }
 
 
