@@ -89,6 +89,6 @@ header {
     font-size: 4rem;
 }
 
-#score-display {
+#round-message {
     white-space: pre-line;
 }

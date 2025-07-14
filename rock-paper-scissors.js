@@ -5,7 +5,8 @@ const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
 const displayScore = document.querySelector('#score-display');
-const roundMessage = document.querySelector('#round-message')
+const roundMessage = document.querySelector('#round-message');
+const resultDisplay = document.querySelector('#result');
 const humanImage = document.querySelector('#human-hand');
 const computerImage = document.querySelector('#computer-hand');
 
@@ -84,11 +85,11 @@ function playRound(event) {
 
 // result message
     if (humanScore === 5) {
-        displayScore.append('\n\nCongratulations, you win the game!!');
+        resultDisplay.textContent = 'Congratulations, you win the game!!';
         humanScore = 0;
         computerScore = 0;
     } else if (computerScore === 5) {
-        displayScore.append('\n\nYou lose, better luck next time!');
+        resultDisplay.textContent = 'You lose, better luck next time!';
         humanScore = 0;
         computerScore = 0;
     }
