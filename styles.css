@@ -97,6 +97,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding-block: 2rem;
+  height: 16rem;
 }
 
 /* moves section */
