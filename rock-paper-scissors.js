@@ -5,6 +5,9 @@ const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
 const display = document.querySelector('#score-display');
+const humanImage = document.querySelector('#human-hand');
+const computerImage = document.querySelector('#computer-hand');
+
 
 rockButton.addEventListener('click', playRound);
 paperButton.addEventListener('click', playRound);
@@ -16,8 +19,6 @@ display.textContent = `${humanScore} : ${computerScore}`
 function playRound(event) {
     let human = event.target.id;
     let computer = String(getComputerChoice()).toLowerCase();
-    let srcHuman = '';
-    let srcComputer = '';
 
     if (human === 'rock') {
         if (computer === 'rock') { // tie game
