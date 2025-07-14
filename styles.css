@@ -103,3 +103,11 @@ header {
   text-align: center;
 }
 
+.pushable {
+  background: var(--red-700);
+  border-radius: 0.75rem;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 0.25rem;
+}
