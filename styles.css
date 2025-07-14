@@ -81,6 +81,14 @@ header {
     padding: 2rem;
 }
 
+#score-heading {
+    font-size: 2rem;
+}
+
+#score-display {
+    font-size: 4rem;
+}
+
 #score-display {
     white-space: pre-line;
 }
