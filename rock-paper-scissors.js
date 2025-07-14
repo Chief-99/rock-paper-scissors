@@ -18,12 +18,11 @@ display.textContent = `${humanScore} : ${computerScore}`
 function playRound(event) {
     let human = event.target.id;
     let computer = String(getComputerChoice()).toLowerCase();
-    let humanSrc = `images/human/${human}-human.png`;
-    let computerSrc = `images/computer/${computer}-computer.png`;
-
+    
     if (human === 'rock') {
         if (computer === 'rock') { // tie game
             display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(2)}`;
+            
         } else if (computer === 'paper') { // loss
             computerScore += 1;
             display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(0)}`;;
@@ -52,6 +51,11 @@ function playRound(event) {
             display.textContent = `${humanScore} : ${computerScore} \n\n${displayMessage(2)}`;
         }
     }
+
+    let humanSrc = `images/human/${human}-human.png`;
+    let computerSrc = `images/computer/${computer}-computer.png`;
+    humanImage.src = humanSrc;
+    computerImage.src = computerSrc;
 
 
     function getComputerChoice() {
