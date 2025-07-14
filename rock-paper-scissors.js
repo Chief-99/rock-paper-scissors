@@ -8,7 +8,6 @@ const display = document.querySelector('#score-display');
 const humanImage = document.querySelector('#human-hand');
 const computerImage = document.querySelector('#computer-hand');
 
-
 rockButton.addEventListener('click', playRound);
 paperButton.addEventListener('click', playRound);
 scissorsButton.addEventListener('click', playRound);
@@ -19,6 +18,8 @@ display.textContent = `${humanScore} : ${computerScore}`
 function playRound(event) {
     let human = event.target.id;
     let computer = String(getComputerChoice()).toLowerCase();
+    let humanSrc = `images/human/${human}-human.png`;
+    let computerSrc = `images/computer/${computer}-computer.png`;
 
     if (human === 'rock') {
         if (computer === 'rock') { // tie game
@@ -74,15 +75,6 @@ function playRound(event) {
             return 'Tie game!';
         }
     }
-
-    function humanHands(choice) {
-        return `images/human/${choice}-human.png`;
-    }
-
-    function commputerHands(choice) {
-        return `images/computer/${choice}-computer.png`;
-    }
-
 
 // result message
     if (humanScore === 5) {
