@@ -76,9 +76,9 @@ header {
 }
 
 #score-container {
-    height: 8rem;
     text-align: center;
     padding: 2rem;
+    margin-bottom: 1rem;
 }
 
 #score-heading {
