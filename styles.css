@@ -96,3 +96,9 @@ header {
   justify-content: space-between;
   padding-block: 2rem;
 }
+
+/* moves section */
+#moves-container {
+  text-align: center;
+}
+
