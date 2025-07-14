@@ -4,7 +4,8 @@ let computerScore = 0;
 const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
-const display = document.querySelector('#score-display');
+const displayScore = document.querySelector('#score-display');
+const roundMessage = document.querySelector('#round-message')
 const humanImage = document.querySelector('#human-hand');
 const computerImage = document.querySelector('#computer-hand');
 
@@ -12,7 +13,7 @@ rockButton.addEventListener('click', playRound);
 paperButton.addEventListener('click', playRound);
 scissorsButton.addEventListener('click', playRound);
 
-display.textContent = `${humanScore} : ${computerScore}`
+displayScore.textContent = `${humanScore} : ${computerScore}`
 
 
 function playRound(event) {
